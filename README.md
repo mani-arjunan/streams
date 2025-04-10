@@ -7,6 +7,10 @@ pretty complex(YESS) transformation and then feed that complexed data into `norm
 ## Prerequisites
 Of course this repo, docker and node installed(>=20)
 
+## How this works
+I have done this in two ways, one typical way of selecting the whole data do the transformation and batch/bulk insert.
+two is using the streams way.
+
 ## How to run
 Clone this repo.
 1. make setup
