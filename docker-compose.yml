@@ -1,0 +1,19 @@
+services:
+  db:
+    image: postgres
+    container_name: postgres
+    environment:
+      POSTGRES_USER: mani 
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: test
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d
+      - ./script.sh:/script.sh
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mani -d test"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+

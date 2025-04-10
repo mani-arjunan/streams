@@ -1,0 +1,17 @@
+{
+  "name": "streams",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start-db": "docker compose -f ./docker-compose.yml up -d",
+    "insert-data": "docker exec -it postgres ./script.sh"
+  },
+  "author": "Manikandan Arjunan",
+  "license": "ISC",
+  "description": "A simple example of how streams can be used in application layer",
+  "dependencies": {
+    "pg": "^8.14.1",
+    "pg-format": "^1.0.4",
+    "pg-query-stream": "^4.8.1"
+  }
+}
